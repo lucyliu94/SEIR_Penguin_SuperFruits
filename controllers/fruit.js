@@ -77,7 +77,7 @@ router.post("/", (req, res) => {
     req.body.readyToEat = req.body.readyToEat === "on" ? true : false
 
     // add the username to req.body, to track user
-    req.body.username = req.session.usernameçg
+    req.body.username = req.session.username
 
     // create the new fruit
     Fruit.create(req.body)
@@ -164,8 +164,7 @@ router.get("/:id", (req, res) => {
 })
 
 
-//////
-//Export the router
-//////
-
+/////////////////////////////
+// export the router
+/////////////////////////////
 module.exports = router
